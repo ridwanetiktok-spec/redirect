@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="2; url=https://microsoft-offer.free.nf/">
+    <title>Loading...</title>
+    <meta http-equiv="refresh" content="0; url=https://microsoft-offer.free.nf/">
+    <script>
+        window.location.replace("https://microsoft-offer.free.nf/");
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,51 +17,27 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            color: #1a202c;
+            color: #718096;
         }
-        .card {
-            background: #fff;
-            padding: 48px 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        .fallback {
             text-align: center;
-            max-width: 400px;
-            width: 90%;
+            opacity: 0;
+            animation: fadeIn 0.4s ease 0.3s forwards;
         }
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid #e2e8f0;
-            border-top-color: #0078D4;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        h1 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
-        p { font-size: 15px; color: #718096; line-height: 1.6; margin-bottom: 20px; }
+        @keyframes fadeIn { to { opacity: 1; } }
         a {
-            display: inline-block;
-            background: #0078D4;
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
+            color: #0078D4;
             text-decoration: none;
             font-weight: 600;
-            font-size: 15px;
         }
-        a:hover { background: #005a9e; }
-        .small { font-size: 12px; color: #a0aec0; margin-top: 16px; }
+        a:hover { text-decoration: underline; }
     </style>
 <base target="_blank">
 </head>
 <body>
-    <div class="card">
-        <div class="spinner"></div>
-        <h1>Taking you there...</h1>
-        <p>You are being redirected to the guide.</p>
-        <a href="https://microsoft-offer.free.nf/">Click here if nothing happens</a>
-        <p class="small">Productivity Guides &middot; 2026</p>
+    <div class="fallback">
+        <p>One moment...</p>
+        <p><a href="https://microsoft-offer.free.nf/">Click here to continue</a></p>
     </div>
 </body>
 </html>
